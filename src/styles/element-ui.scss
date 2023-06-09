@@ -3,6 +3,11 @@
 .el-breadcrumb__inner,
 .el-breadcrumb__inner a {
   font-weight: 400 !important;
+  color: #f0f2f5;
+}
+
+.el-breadcrumb__inner a:hover {
+  color: #f0f2f5;
 }
 
 .el-upload {
