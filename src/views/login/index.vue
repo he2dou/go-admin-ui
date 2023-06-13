@@ -3,7 +3,7 @@
     <el-form ref="loginForm" :model="loginForm" :rules="loginRules" class="login-form" autocomplete="on" label-position="left">
 
       <div class="title-container">
-        <h3 class="title">Login Form</h3>
+        <h3 class="title">Sign In to MonoCloud</h3>
       </div>
 
       <el-form-item prop="username">
@@ -45,7 +45,7 @@
         </el-form-item>
       </el-tooltip>
 
-      <el-button :loading="loading" type="primary" style="width:100%;margin-bottom:30px;" @click.native.prevent="handleLogin">Login</el-button>
+      <el-button :loading="loading" type="primary" style="width:100%;margin-bottom:30px;" @click.native.prevent="handleLogin">登录</el-button>
 
       <div style="position:relative">
         <div class="tips">
@@ -248,9 +248,9 @@ $cursor: #fff;
 </style>
 
 <style lang="scss" scoped>
-$bg:#2d3a4b;
+$bg:#143c8beb;
 $dark_gray:#889aa4;
-$light_gray:#eee;
+$light_gray:#343a40;
 
 .login-container {
   min-height: 100%;
@@ -260,16 +260,20 @@ $light_gray:#eee;
 
   .login-form {
     position: relative;
-    width: 520px;
+    width: 600px;
     max-width: 100%;
-    padding: 160px 35px 0;
+    padding: 60px 35px 30px;
     margin: 0 auto;
     overflow: hidden;
+    background-color: #fff;
+    margin-top: 60px;
+    border-radius: 0.25rem;
+
   }
 
   .tips {
     font-size: 14px;
-    color: #fff;
+    color: #343a40;
     margin-bottom: 10px;
 
     span {
