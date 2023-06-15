@@ -91,7 +91,7 @@ export const constantRoutes = [
         path: 'index',
         component: () => import('@/views/documentation/index'),
         name: 'Documentation',
-        meta: { title: '知识库', icon: 'documentation', affix: true }
+        meta: { title: '知识库', icon: 'documentation', affix: true, group: '知识库' }
       }
     ]
   },
@@ -104,7 +104,7 @@ export const constantRoutes = [
         path: 'index',
         component: () => import('@/views/guide/index'),
         name: 'Guide',
-        meta: { title: 'Guide', icon: 'guide', noCache: true }
+        meta: { title: 'Guide', icon: 'guide', noCache: true, group: '指南' }
       }
     ]
   },
@@ -135,6 +135,7 @@ export const asyncRoutes = [
     redirect: '/permission/page',
     alwaysShow: true, // will always show the root menu
     name: 'Permission',
+    showGroup: true,
     meta: {
       title: 'Permission',
       icon: 'lock',
@@ -179,7 +180,7 @@ export const asyncRoutes = [
         path: 'index',
         component: () => import('@/views/icons/index'),
         name: 'Icons',
-        meta: { title: 'Icons', icon: 'icon', noCache: true }
+        meta: { title: 'Icons', icon: 'icon', noCache: true, group: '图标' }
       }
     ]
   },
@@ -230,7 +231,7 @@ export const asyncRoutes = [
         path: 'index',
         component: () => import('@/views/tab/index'),
         name: 'Tab',
-        meta: { title: 'Tab', icon: 'tab' }
+        meta: { title: 'Tab', icon: 'tab', group: '标签' }
       }
     ]
   },
@@ -268,7 +269,7 @@ export const asyncRoutes = [
         path: 'log',
         component: () => import('@/views/error-log/index'),
         name: 'ErrorLog',
-        meta: { title: 'Error Log', icon: 'bug' }
+        meta: { title: 'Error Log', icon: 'bug', group: '错误日志' }
       }
     ]
   },
@@ -336,7 +337,7 @@ export const asyncRoutes = [
         path: 'index',
         component: () => import('@/views/pdf/index'),
         name: 'PDF',
-        meta: { title: 'PDF', icon: 'pdf' }
+        meta: { title: 'PDF', icon: 'pdf', group: 'PDF' }
       }
     ]
   },
@@ -354,11 +355,10 @@ export const asyncRoutes = [
         path: 'index',
         component: () => import('@/views/theme/index'),
         name: 'Theme',
-        meta: { title: 'Theme', icon: 'theme' }
+        meta: { title: 'Theme', icon: 'theme', group: '主题' }
       }
     ]
   },
-
   {
     path: '/clipboard',
     component: Layout,
