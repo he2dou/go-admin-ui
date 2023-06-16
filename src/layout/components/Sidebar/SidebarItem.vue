@@ -1,29 +1,35 @@
 <template>
   <div v-if="!item.hidden">
     <template v-if="hasOneShowingChild(item.children,item) && (!onlyOneChild.children||onlyOneChild.noShowingChildren)&&!item.alwaysShow">
+      <el-menu-item-group v-if="onlyOneChild.meta.group">
+        <template slot="title">{{ onlyOneChild.name }}</template>
+      </el-menu-item-group>
       <app-link v-if="onlyOneChild.meta" :to="resolvePath(onlyOneChild.path)">
-        <el-menu-item-group v-if="onlyOneChild.meta.group">
-          <template slot="title">{{ onlyOneChild.meta.group }}</template>
-        </el-menu-item-group>
         <el-menu-item :index="resolvePath(onlyOneChild.path)" :class="{'submenu-title-noDropdown':!isNest}">
           <item :icon="onlyOneChild.meta.icon||(item.meta&&item.meta.icon)" :title="onlyOneChild.meta.title" />
         </el-menu-item>
       </app-link>
     </template>
 
-    <el-submenu v-else ref="subMenu" :index="resolvePath(item.path)" popper-append-to-body>
-      <template slot="title">
-        <item v-if="item.meta" :icon="item.meta && item.meta.icon" :title="item.meta.title" />
-      </template>
-      <sidebar-item
-        v-for="child in item.children"
-        :key="child.path"
-        :is-nest="true"
-        :item="child"
-        :base-path="resolvePath(child.path)"
-        class="nest-menu"
-      />
-    </el-submenu>
+    <template v-else>
+      <el-menu-item-group v-if="item.meta.group">
+        <template slot="title">{{ item.meta.group }}</template>
+      </el-menu-item-group>
+      <el-submenu ref="subMenu" :index="resolvePath(item.path)" popper-append-to-body>
+        <template slot="title">
+          <item v-if="item.meta" :icon="item.meta && item.meta.icon" :title="item.meta.title" />
+        </template>
+        <sidebar-item
+          v-for="child in item.children"
+          :key="child.path"
+          :is-nest="true"
+          :item="child"
+          :base-path="resolvePath(child.path)"
+          class="nest-menu"
+        />
+      </el-submenu>
+    </template>
+
   </div>
 </template>
 
