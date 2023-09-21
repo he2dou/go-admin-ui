@@ -71,11 +71,11 @@ export default {
 .app-breadcrumb.el-breadcrumb {
   display: inline-block;
   font-size: 14px;
-  line-height: 56px;
+  line-height: 65px;
   margin-left: 8px;
 
   .no-redirect {
-    color: #fff;
+    color: #ffffff;
     cursor: text;
   }
 }
