@@ -84,14 +84,14 @@ export default {
 
 <style lang="scss" scoped>
 .navbar {
-  height: 65px;
+  height: 60px;
   overflow: hidden;
   position: relative;
-  background: #0f5ef7;
+  background: #ffffff;
   box-shadow: 0 1px 4px rgba(0,21,41,.08);
 
   .hamburger-container {
-    line-height: 65px;
+    line-height: 60px;
     height: 100%;
     float: left;
     cursor: pointer;
@@ -115,7 +115,7 @@ export default {
   .right-menu {
     float: right;
     height: 100%;
-    line-height: 65px;
+    line-height: 60px;
 
     &:focus {
       outline: none;
@@ -126,7 +126,7 @@ export default {
       padding: 0 8px;
       height: 100%;
       font-size: 18px;
-      color: #ffffff;
+      color: rgb(38, 38, 38);
       vertical-align: text-bottom;
 
       &.hover-effect {

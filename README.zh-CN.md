@@ -1,5 +1,5 @@
 <h1>参考模板 </h1>
-https://materialpro-vue3-admin.vercel.app/dashboards/analytical
+https://mantisdashboard.io/widget/statistics
 
 
 <p align="center">

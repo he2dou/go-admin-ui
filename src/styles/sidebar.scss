@@ -5,7 +5,7 @@
     transition: margin-left .28s;
     margin-left: $sideBarWidth;
     position: relative;
-    background-color: #f0f2f5;
+    background-color: #FAFAFB;
   }
 
   .sidebar-container {
@@ -20,6 +20,7 @@
     left: 0;
     z-index: 1001;
     overflow: hidden;
+    border-right: solid 1px #e6e6e6;
 
     // reset element-ui css
     .horizontal-collapse-transition {
@@ -28,7 +29,6 @@
 
     .scrollbar-wrapper {
       overflow-x: hidden !important;
-      margin-top: 15px;
     }
 
     .el-scrollbar__bar.is-vertical {
@@ -41,7 +41,7 @@
 
     &.has-logo {
       .el-scrollbar {
-        height: calc(100% - 65px - 20px);
+        height: calc(100% - 60px - 20px);
       }
     }
 
@@ -95,7 +95,7 @@
 
   .hideSidebar {
     .sidebar-container {
-      width: 65px !important;
+      width: 60px !important;
     }
 
     .main-container {
@@ -156,6 +156,12 @@
 
   .el-menu--collapse .el-menu .el-submenu {
     min-width: $sideBarWidth !important;
+  }
+
+  .el-menu-item.is-active {
+    border-right:rgb(22, 119, 255) solid 2px !important;
+    background-color: rgb(230, 244, 255) !important;
+    color: rgb(22, 119, 255) !important;
   }
 
   // mobile responsive
