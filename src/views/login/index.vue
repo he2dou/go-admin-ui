@@ -248,7 +248,7 @@ $cursor: #fff;
 </style>
 
 <style lang="scss" scoped>
-$bg:#143c8beb;
+$bg:#FAFAFB;
 $dark_gray:#889aa4;
 $light_gray:#343a40;
 
